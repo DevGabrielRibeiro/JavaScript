@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    text-align: center;
+}
+.imagem-principal img {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 20px;
+    transition: opacity 0.5s;
+}
+.thumb img {
+    width: 100px;
+    height: 80px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.thumb img:hover {
+    transform: scale(1.1);
+}
