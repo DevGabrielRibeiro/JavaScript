@@ -1,8 +1,4 @@
-function trocarImagem(src) {
-    let imagemPrincipal = document.getElementById('imagem-principal');
-    imagemPrincipal.style.opacity = 0;
-    setTimeout(function() {
-        imagemPrincipal.src = src;
-        imagemPrincipal.style.opacity = 1;
-    }, 500);
+function changeImage(thumbnail) {
+    const currentImage = document.getElementById('imagem-principal');
+    currentImage.src = thumbnail.src;
 }
