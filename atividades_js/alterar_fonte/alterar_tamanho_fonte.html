@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(83, 81, 82);
+        }
+
+        #paragrafo {
+            color: rgb(252, 252, 252);
+            font-size: 8px;
+            font-weight: bold;
+            background-color: rgb(43, 16, 16);
+            text-align: center;
+            padding: 10px;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #aumentar,
+        #diminuir {
+            margin: 10px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+    <title>Alterar Tamanho da fonte</title>
+</head>
+
+<body>
+    <p id="paragrafo">Exemplo para verificar o tamanho da fonte</p>
+    <div class="btn">
+        <button id="aumentar">Aumentar fonte</button>
+        <button id="diminuir">Diminuir fonte</button>
+    </div>
+    
+    
+    <script>
+        const paragrafo = document.getElementById('paragrafo');
+        const aumentar = document.getElementById('aumentar');
+        const diminuir = document.getElementById('diminuir');
+        let font = 10 
+
+        aumentar.addEventListener('click', () => {
+            font += 2
+            paragrafo.style.fontSize = font + "px";
+        });
+
+        diminuir.addEventListener('click', () => {
+            font -= 2
+            paragrafo.style.fontSize = font + "px";
+        });
+    </script>
+
+    
+</body>
+
+</html>

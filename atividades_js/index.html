@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Botões</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        #message {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="message">Este é o texto central</div>
+        <button id="yesButton">Sim</button>
+        <button id="noButton">Não</button>
+    </div>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            document.getElementById('message').innerText = 'Você clicou em Sim!';
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            this.style.transform = 'scale(1.2)';
+        });
+    </script>
+</body>
+</html>

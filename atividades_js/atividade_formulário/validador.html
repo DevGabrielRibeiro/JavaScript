@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        .form {
+            display: flex;
+            margin-top: 20px;
+
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            align-items: center;
+            margin: 0 auto;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <title>Validar Formulário</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Digite seu nome" id="name">
+        <input type="email" placeholder="Digite seu email" id="email">
+        <input type="text" placeholder="Digite sua senha" id="password">
+    </div>
+    <p id="text"></p>
+    <div>
+        <button id="button">Enviar Formulário</button>
+    </div>
+
+    <script>
+        const text = document.getElementById('text');
+        const button = document.getElementById('button');
+        
+        button.addEventListener('click', function () {
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            const login = document.getElementById('name').value;
+           
+            if (!login|| !email || !password) {
+                text.textContent = "Por favor, preencha todos os campos.";
+                text.style.color ='red';
+            } else {
+                text.textContent = "Formulário enviado com sucesso!";
+                text.style.color = 'green';
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

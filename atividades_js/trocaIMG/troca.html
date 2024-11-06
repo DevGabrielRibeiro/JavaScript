@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Imagem</title>
+</head>
+
+<body>
+    <div>
+        <img id="image" src="" alt="">
+    </div>
+    <button id="botao">Trocar Imagem</button>
+
+    <script>
+        const button = document.getElementById('botao');
+        const image = document.getElementById('image');
+        let imagem1 = true;
+
+        button.addEventListener('click', () => {
+            if (imagem1) {
+                image.src = 'https://s2-techtudo.glbimg.com/SSAPhiaAy_zLTOu3Tr3ZKu2H5vg=/0x0:1024x609/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/c/u/15eppqSmeTdHkoAKM0Uw/dall-e-2.jpg';
+                imagem1 = false;
+            } else {
+                image.src = 'https://cpv.ifsp.edu.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png';
+                imagem1 = true;
+            }
+        });
+    </script>
+</body>
+
+</html>

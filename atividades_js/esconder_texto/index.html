@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            /*Altera a cor de fundo do body*/
+        }
+
+        p {
+            font-size: 50px;
+            /*Altera o tamanho da fonte*/
+            color: yellow;
+            /*Altera a cor da fonte*/
+            font-weight: bold;
+            /*Altera a formatação do texto*/
+            text-align: center;
+            /*Deixa o texte alinhado "Centro" */
+            justify-content: center;
+            /*Os elementos de um container são distribuídos em relação ao eixo principal */
+            padding: 20px;
+            /* Espaçamento entre o conteúdo de um elemento e suas bordas */
+        }
+
+        button {
+            display: flex;
+            /*Deixa os elementos filhos flexiveis*/
+            justify-content: center;
+            /*Os elementos de um container são distribuídos em relação ao eixo principal*/
+            font-size: 20px;
+            /*Altera o tamanha da fonte*/
+            margin: 0 auto;
+            /*Espaçamento das margens*/
+            background-color: darkblue;
+            /*Altera a cor de fundo do botão*/
+            color: white;
+            /*Cor da fonte do botão*/
+            padding: 10px 20px;
+            /*Espaçamento do texto dentro do botão*/
+            border: none;
+            /*Borda do botão*/
+            cursor: pointer;
+            /*Altera o cursor ao passar sobre o botão*/
+        }
+    </style>
+    <title>Esconder Texto</title>
+</head>
+
+<body>
+    <p id="paragrafo"></p>
+    <button id="botao">Clique Aqui</button>
+    <script>
+        /*cria a variavel e pega o elemento (pelo id)*/
+        const button = document.getElementById('botao');
+        const paragraph = document.getElementById('paragrafo');
+        /*Da valor á variavel*/
+        let visivel = true;
+
+        /*Adiciona um evento ao 'clicar' no botão*/
+        button.addEventListener('click', () => {
+            /*Condição*/
+            if (visivel) {
+                paragraph.style.display = 'none';
+                button.textContent = 'Mostrar Texto';
+            } else {
+                paragraph.style.display = 'block';
+                paragraph.textContent = 'Esté é um texto que pode ser mostrado ou ocultado';
+                paragraph.style.backgroundColor = 'darkblue';
+                button.textContent = 'Ocultar Texto';
+            }
+            visivel = !visivel;
+        });
+    </script>
+</body>
+
+</html>

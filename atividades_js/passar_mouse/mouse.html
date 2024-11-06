@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: white !important;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: black;
+            transition: color 0.5s;
+            /* Definimos uma transição para a mudança de cor */
+        }
+    </style>
+    <title>Mudar a cor ao passar o mouse</title>
+</head>
+
+<body>
+    <h1 id="text">Esse é um texto que muda de cor ao passar o mouse</h1>
+
+    <script>
+        const text = document.getElementById('text');
+        let interValId;
+        text.addEventListener('mouseover', function () {
+            interValId = setInterval (function(){
+             text.style.color = generateColor();
+            },200);
+        });
+            
+            text.addEventListener('mouseout', function () {
+                clearInterval(interValId);
+                text.style.color = 'black';
+                /* Ao soltar o mouse, a cor volta para preto */
+            });
+
+        function generateColor() {
+
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contador</title>
+</head>
+
+<body>
+    <h1 id="contador" class="cont">0</h1>
+    <div class="center">
+        <button id="soma" class="some">Somar</button>
+        <button id="subtrair" class="sub">Subtrair</button>
+    </div>
+
+
+    <script>
+        const soma = document.getElementById("soma");
+        const subtrair = document.getElementById("subtrair");
+        const contador = document.getElementById("contador");
+        const fundo = document.getElementsByTagName("body")[0];
+
+        let result = 0
+
+        soma.addEventListener("click", () => {
+            result = result + 1;
+            contador.textContent = result;
+            if (result > 10) {
+                fundo.style.backgroundColor = "blue";
+            }
+        });
+
+        subtrair.addEventListener("click", () => {
+            result = result - 1;
+            contador.textContent = result;
+            if (result < 10) {
+                fundo.style.backgroundColor = "yellow";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

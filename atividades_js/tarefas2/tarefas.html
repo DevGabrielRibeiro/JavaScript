@@ -1,0 +1,25 @@
+<body>
+    <input type="text" id="input">
+    <button id="btn">Clique</button>
+    <ul id="list"></ul>
+
+    <script>
+        const input = document.getElementById('input');
+        const btn = document.getElementById('btn');
+        const list = document.getElementById('list');
+        
+        btn.addEventListener('click', function () {
+            let li = document.createElement('li');
+            li.textContent = input.value;
+            
+            let apagar = document.createElement('button');
+            apagar.textContent = 'Apagar';
+            apagar.addEventListener('click', function() {
+                list.removeChild(li);
+            });
+            li.appendChild(apagar);
+            list.appendChild(li);
+            input.value = '';
+        });
+    </script>
+</body>
